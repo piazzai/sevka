@@ -26,20 +26,38 @@ Sevka is a solution to this problem. It is a heavily streamlined Iosevka build t
 
 ## Build
 
-Install dependencies, including [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/). See [Building](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#building) and [Customized Build](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build).
+Prebuilt font files are included in the `dist` folder. If you'd like to replicate the build process, then install the dependencies [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/), and take a look at Iosevka's own [docs](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build).
+
+Then, clone the Iosevka repo and `cd` into it after copying Sevka's build plans.
 
 ```bash
 git clone --depth 1 https://github.com/be5invis/Iosevka
 cp private-build-plans.toml Iosevka/private-build-plans.toml
 cd Iosevka
+```
+
+Install local dependencies and build the fonts.
+
+```bash
 npm install
 npm run build -- contents::Sevka
 npm run build -- contents::SevkaSlab
 npm run build -- contents::SevkaFixed
+```
+
+Run the `subset.sh` script to subset the files you've built to ASCII and Latin charsets.
+
+```bash
 bash ../subset.sh
-mv dist/LATIN ../dist/LATIN
-mv dist/US_ASCII ../dist/US_ASCII
+```
+
+Copy the resulting fonts into the root directory, `cd` back, and delete the Iosevka repo.
+
+```bash
+mv dist/ascii ../ascii
+mv dist/latin ../latin
 cd ..
 rm -rf Iosevka
 ```
--->
+
+Done! Your files are in the `ascii` and `latin` folders.
