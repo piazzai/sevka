@@ -89,29 +89,29 @@ $weights: (
 
 @each $face, $face-value in $faces {
   @font-face {
-    font-family: "#{face-value}";
+    font-family: "#{$face-value}";
     font-display: swap;
     font-style: normal;
     font-weight: 400;
-    src: url("path/to/fonts/#{face}-Regular.ttf") format("truetype") url("path/to/fonts/#{face}-Regular.woff2") format("woff2");
+    src: url("path/to/fonts/#{$face}-Regular.ttf") format("truetype") url("path/to/fonts/#{$face}-Regular.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: "#{face-value}";
+    font-family: "#{$face-value}";
     font-display: swap;
     font-style: italic;
     font-weight: 400;
-    src: url("path/to/fonts/#{face}-Italic.ttf") format("truetype") url("path/to/fonts/#{face}-Italic.woff2") format("woff2");
+    src: url("path/to/fonts/#{$face}-Italic.ttf") format("truetype") url("path/to/fonts/#{$face}-Italic.woff2") format("woff2");
   }
 
   @each $style, $style-value in $styles {
     @each $weight, $weight-value in $weights {
       @font-face {
-        font-family: "#{face-value}";
+        font-family: "#{$face-value}";
         font-display: swap;
         font-style: #{$style};
         font-weight: #{$weight-value};
-        src: url("path/to/fonts/#{face}-#{$weight}#{$style-value}.ttf") format("truetype") url("path/to/fonts/#{face}-#{$weight}#{$style-value}.woff2") format("woff2");
+        src: url("path/to/fonts/#{$face}-#{$weight}#{$style-value}.ttf") format("truetype") url("path/to/fonts/#{$face}-#{$weight}#{$style-value}.woff2") format("woff2");
       }
     }
   }
