@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("Sevka/Sevka-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("Sevka/Sevka-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("Sevka/Sevka-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("Sevka/Sevka-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("SevkaSlab/SevkaSlab-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("SevkaSlab/SevkaSlab-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("SevkaSlab/SevkaSlab-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("SevkaSlab/SevkaSlab-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("SevkaFixed/SevkaFixed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("SevkaFixed/SevkaFixed-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("SevkaFixed/SevkaFixed-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("SevkaFixed/SevkaFixed-BoldItalic.ttf") format("truetype");
+}

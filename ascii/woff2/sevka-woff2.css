@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("Sevka/Sevka-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("Sevka/Sevka-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("Sevka/Sevka-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("Sevka/Sevka-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("SevkaSlab/SevkaSlab-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("SevkaSlab/SevkaSlab-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("SevkaSlab/SevkaSlab-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("SevkaSlab/SevkaSlab-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("SevkaFixed/SevkaFixed-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("SevkaFixed/SevkaFixed-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("SevkaFixed/SevkaFixed-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("SevkaFixed/SevkaFixed-BoldItalic.woff2") format("woff2");
+}

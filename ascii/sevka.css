@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("ttf/Sevka/Sevka-Regular.ttf") format("truetype") url("woff2/Sevka/Sevka-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("ttf/Sevka/Sevka-Italic.ttf") format("truetype") url("woff2/Sevka/Sevka-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("ttf/Sevka/Sevka-Bold.ttf") format("truetype") url("woff2/Sevka/Sevka-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("ttf/Sevka/Sevka-BoldItalic.ttf") format("truetype") url("woff2/Sevka/Sevka-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("ttf/SevkaSlab/SevkaSlab-Regular.ttf") format("truetype") url("woff2/SevkaSlab/SevkaSlab-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("ttf/SevkaSlab/SevkaSlab-Italic.ttf") format("truetype") url("woff2/SevkaSlab/SevkaSlab-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("ttf/SevkaSlab/SevkaSlab-Bold.ttf") format("truetype") url("woff2/SevkaSlab/SevkaSlab-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Slab";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("ttf/SevkaSlab/SevkaSlab-BoldItalic.ttf") format("truetype") url("woff2/SevkaSlab/SevkaSlab-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("ttf/SevkaFixed/SevkaFixed-Regular.ttf") format("truetype") url("woff2/SevkaFixed/SevkaFixed-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("ttf/SevkaFixed/SevkaFixed-Italic.ttf") format("truetype") url("woff2/SevkaFixed/SevkaFixed-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("ttf/SevkaFixed/SevkaFixed-Bold.ttf") format("truetype") url("woff2/SevkaFixed/SevkaFixed-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sevka Fixed";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+  src: url("ttf/SevkaFixed/SevkaFixed-BoldItalic.ttf") format("truetype") url("woff2/SevkaFixed/SevkaFixed-BoldItalic.woff2") format("woff2");
+}
