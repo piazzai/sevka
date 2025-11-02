@@ -73,7 +73,7 @@ $faces: (
   Sevka: "Sevka",
   SevkaSlab: "Sevka Slab",
   SevkaFixed: "Sevka Fixed",
-)
+);
 
 $styles: (
   normal: "",
