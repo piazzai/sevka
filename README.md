@@ -22,9 +22,8 @@ Such unwavering precision gives Iosevka the sort of timeless quality you sometim
 
 There is one problem with Iosevka's use on the web, however. Due to extensive Unicode coverage, multi-language support, ample customization options, OpenType features, and ligation sets, the font is not exactly lightweight. Just the vanilla face (regular weight, normal width, upright slope, in TrueType format) is 9.9 MB. If we want a minimal bundle that includes regular, italic, bold, and bold italic, which is necessary to correctly render markdown documents like this, the total filesize climbs to 40.4 MB. And if we simply a Iosevka package off the shelf—say, [Iosevka Slab](https://github.com/be5invis/Iosevka/releases/download/v33.3.3/PkgTTF-IosevkaSlab-33.3.3.zip)—and load it with all its bells and whistles, we are looking at a whopping 546.1 MB. This is simply unacceptable for a website, most of which don't even need full Unicode encoding as they only need to render ASCII or Latin characters.
 
-Sevka is a solution to this problem. It is a heavily streamlined Iosevka build that preserves only the most useful weights and shapes, enabling text optimization at small and display sizes, but drops all unnecessary glyphs and uneconomical features. This allows for a much leaner font that retains all of Iosevka's charm but only requires a fraction of the bandwidth.
+Sevka is a solution to this problem. It is a heavily streamlined Iosevka build that preserves only the most useful weights and shapes, enabling text optimization at small and display sizes, but drops all unnecessary glyphs and uneconomical features. This allows for a much leaner font that retains Iosevka's charm at a fraction of the bandwidth.
 
-<!--
 ## Build
 
 Install dependencies, including [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/). See [Building](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#building) and [Customized Build](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build).
