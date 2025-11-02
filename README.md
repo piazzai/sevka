@@ -12,7 +12,9 @@ The font comes in three versions:
 
 Sevka and Sevka Slab are intended for body text and headings. Sevka Fixed is the true monospaced version, to be used for code, tables, and other environments where column width is constant.
 
-See the [specimen](specimen.html) for an overview of the three versions and the two character sets.
+## Specimen
+
+![](https://github.com/piazzai/sevka/blob/master/screenshot.png)
 
 ## Motivation
 
