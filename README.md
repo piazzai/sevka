@@ -63,3 +63,59 @@ rm -rf Iosevka
 ```
 
 Done! Your files are in the `ascii` and `latin` folders.
+
+## Usage
+
+Copy the fonts to your project's asset directory and load them with the CSS blocks included in `ascii/sevka.css` or `latin/sevka.css`. Alternative stylesheets can be found in `ascii` and `latin`'s subfolders, in case you only want to load the TrueType or WOFF2 versions.
+
+You can also use the more compact Sass syntax:
+
+```scss
+$faces: (
+  Sevka: "Sevka",
+  SevkaSlab: "Sevka Slab",
+  SevkaFixed: "Sevka Fixed",
+)
+
+$styles: (
+  normal: "",
+  italic: "Italic",
+);
+
+$weights: (
+  "Light": 300,
+  "Medium": 500,
+  "SemiBold": 600,
+  "Bold": 700,
+);
+
+@each $face, $face-value in $faces {
+  @font-face {
+    font-family: "#{face-value}";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url("path/to/fonts/#{face}-Regular.ttf") format("truetype") url("path/to/fonts/#{face}-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "#{face-value}";
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    src: url("path/to/fonts/#{face}-Italic.ttf") format("truetype") url("path/to/fonts/#{face}-Italic.woff2") format("woff2");
+  }
+
+  @each $style, $style-value in $styles {
+    @each $weight, $weight-value in $weights {
+      @font-face {
+        font-family: "#{face-value}";
+        font-display: swap;
+        font-style: #{$style};
+        font-weight: #{$weight-value};
+        src: url("path/to/fonts/#{face}-#{$weight}#{$style-value}.ttf") format("truetype") url("path/to/fonts/#{face}-#{$weight}#{$style-value}.woff2") format("woff2");
+      }
+    }
+  }
+}
+```
