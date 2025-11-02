@@ -28,14 +28,13 @@ Sevka is a solution to this problem. It is a heavily streamlined Iosevka build t
 
 ## Build
 
-Prebuilt font files are included in the `dist` folder. If you'd like to replicate the build process, then install the dependencies [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/), and take a look at Iosevka's own [docs](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build).
+Prebuilt font files based on [Iosevka v33.3.3](https://github.com/be5invis/Iosevka/releases/tag/v33.3.3) are included in the `dist` folder. If you'd like to replicate the build process, install [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/). Take a look at Iosevka's own [docs](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build). You should build the files yourself if you want a different version of Iosevka, or if you'd like to change the build plans in order to add features or introduce character variants. You can create new build plans through Iosevka's [customizer tool](https://typeof.net/Iosevka/customizer).
 
-Then, clone the Iosevka repo and `cd` into it after copying Sevka's build plans.
+When you have your build plans, clone the Iosevka repo, `cd` into it, and copy the plans.
 
 ```bash
 git clone --depth 1 https://github.com/be5invis/Iosevka
-cp private-build-plans.toml Iosevka/private-build-plans.toml
-cd Iosevka
+cd Iosevka && cp ../private-build-plans.toml private-build-plans.toml
 ```
 
 Install local dependencies and build the fonts.
@@ -47,7 +46,7 @@ npm run build -- contents::SevkaSlab
 npm run build -- contents::SevkaFixed
 ```
 
-Run the `subset.sh` script to subset the files you've built to ASCII and Latin charsets.
+Run `subset.sh` to reduce the files you've just built to ASCII and Latin characters.
 
 ```bash
 bash ../subset.sh
@@ -58,8 +57,7 @@ Copy the resulting fonts into the root directory, `cd` back, and delete the Iose
 ```bash
 mv dist/ascii ../ascii
 mv dist/latin ../latin
-cd ..
-rm -rf Iosevka
+cd .. && rm -rf Iosevka
 ```
 
 Done! Your files are in the `ascii` and `latin` folders.
