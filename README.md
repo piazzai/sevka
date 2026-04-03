@@ -2,7 +2,7 @@
 
 Sevka is a subset of [Iosevka](https://typeof.net/Iosevka/) intended for online distribution. It constrains Iosevka to five weights (light, regular, medium, semibold, bold), one width (normal), and two slopes (upright, italic), resulting in 10 fonts against Iosevka's original 54.
 
-To further reduce filesize, all OpenType features, character variants, and ligations are disabled at build time, and the fonts are reduced after build to the [US-ASCII](https://en.wikipedia.org/wiki/ASCII) or [Latin-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1) character sets. As a result, a basic TrueType bundle consisting of regular, italic, bold, and bold italic weighs only 139.4 kB (ASCII) or 258.2 kB (Latin) against Iosevka's original 40.4 MB. In WOFF2 format, the size is further compressed to 57.8 kB (ASCII) and 100.9 kB (Latin), allowing fonts to load in a split second.
+To further reduce filesize, all OpenType features, character variants, and ligations are disabled at build time, and the fonts are reduced after build to either [US-ASCII](https://en.wikipedia.org/wiki/ASCII) or [Latin-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1) characters. As a result, a basic TrueType bundle consisting of regular, italic, bold, and bold italic weights amounts to only 139.4 kB (ASCII) or 258.2 kB (Latin) against Iosevka's original 40.4 MB. In WOFF2 format, the size is further compressed to 57.8 kB (ASCII) and 100.9 kB (Latin), allowing fonts to load in a split second.
 
 The font comes in three versions:
 
@@ -18,21 +18,28 @@ Sevka and Sevka Slab are intended for body text and headings. Sevka Fixed is the
 
 ## Motivation
 
-Iosevka is a marvelous typeface. It is open-source, it looks stunning, and it comes in a variety of weights, widths, and slopes, with fixed-space and quasi-proportional versions, hundreds of character variants, ligatures, and a matching slab-serif family.
+Iosevka is a marvelous typeface. It is open-source, looks stunning, and comes in a variety of weights, widths, and slopes, with fixed-space and quasi-proportional versions, hundreds of character variants, ligatures, and a matching slab-serif family.
 
-There is one problem with its use on the web, though. Due to extensive Unicode coverage, language support, customization options, OpenType features, and ligature sets, its filesize is massive. Just the vanilla face (regular, normal width, upright, in TrueType format) is 9.9 MB. This is unacceptable for a website, especially if it doesn't even need full Unicode encoding because it only needs to render ASCII or Latin characters.
+There is one problem with its use on the web, however. Due to extensive Unicode coverage, language support, OpenType features, ligature sets, and extensive customization options, its filesize is massive. Just the vanilla face (regular, normal width, upright, in TrueType format) is 9.9 MB. This is inconvenient for a website, especially if one does not even need full Unicode encoding but only ASCII or Latin characters.
 
-Sevka is a solution to this problem. It is a heavily streamlined Iosevka build that only retains weights and shapes commonly found on the web, dropping all unnecessary glyphs and uneconomical features. This allows for a much leaner font that requires minimal bandwidth but ensures legibility at various display sizes.
+Sevka is a solution to this problem. It is a heavily streamlined Iosevka build that only retains weights and shapes commonly found on the web, dropping all unnecessary glyphs and uneconomical features. This allows for a much leaner font that requires minimal bandwidth but covers virtually all use cases.
 
 ## Build
 
-Prebuilt font files based on [Iosevka v33.3.3](https://github.com/be5invis/Iosevka/releases/tag/v33.3.3) are included in the `dist` folder. If you'd like to replicate the build process, install [node.js](https://nodejs.org/), [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/). You might want to build the files yourself if you want a different release of Iosevka, or if you'd like to reintroduce particular features or character variants. If this is the case, please [read the docs](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build) and create new build plans through Iosevka's [customizer tool](https://typeof.net/Iosevka/customizer).
+Prebuilt font files based on [Iosevka v34.3.0](https://github.com/be5invis/Iosevka/releases/tag/v34.3.0) are included in the `dist` folder. If you'd like to replicate the build process, install [node.js](https://nodejs.org/) and [pip](https://pypi.org/project/pip/). You might want to build the files yourself if you want a different release of Iosevka, or if you'd like to reintroduce particular features or character variants. If this is the case, please [read the docs](https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#customized-build) and create new build plans through Iosevka's [customizer tool](https://typeof.net/Iosevka/customizer).
 
 When you have your build plans, clone the Iosevka repo, `cd` into it, and copy the plans.
 
 ```bash
 git clone --depth 1 https://github.com/be5invis/Iosevka
 cd Iosevka && cp ../private-build-plans.toml private-build-plans.toml
+```
+
+The build process requires [ttfautohint](https://freetype.org/ttfautohint/), and [glyphhanger](https://www.zachleat.com/web/glyphhanger/) to be installed on your computer. Both are available via `npm` and can be installed globally.
+
+```bash
+npm install -g ttfautohint
+npm install -g glyphhanger
 ```
 
 Install local dependencies and build the fonts.
@@ -44,7 +51,14 @@ npm run build -- contents::SevkaSlab
 npm run build -- contents::SevkaFixed
 ```
 
-Run `subset.sh` to reduce the files you've just built to ASCII and Latin characters.
+Creating subsets requires the [fonttools](https://pypi.org/project/fonttools/) and [brotli](https://pypi.org/project/brotli/) Python libraries. They can be installed with `pip`.
+
+```bash
+pip install fonttools
+pip install brotli
+```
+
+Now you can run `subset.sh` to reduce the files previously built to ASCII and Latin characters.
 
 ```bash
 bash ../subset.sh
@@ -53,8 +67,8 @@ bash ../subset.sh
 Copy the resulting fonts into the root directory, `cd` back, and delete the Iosevka repo.
 
 ```bash
-mv dist/ascii ../ascii
-mv dist/latin ../latin
+mv dist/ascii ../
+mv dist/latin ../
 cd .. && rm -rf Iosevka
 ```
 
