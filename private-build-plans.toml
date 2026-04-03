@@ -6,20 +6,15 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Sevka.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.Sevka.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
 [buildPlans.Sevka.weights.Light]
 shape = 300
 menu = 300
 css = 300
+
+[buildPlans.Sevka.weights.Regular]
+shape = 400
+menu = 400
+css = 400
 
 [buildPlans.Sevka.weights.Medium]
 shape = 500
@@ -30,6 +25,11 @@ css = 500
 shape = 600
 menu = 600
 css = 600
+
+[buildPlans.Sevka.weights.Bold]
+shape = 700
+menu = 700
+css = 700
 
 [buildPlans.Sevka.widths.Normal]
 shape = 500
@@ -56,20 +56,15 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.SevkaSlab.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.SevkaSlab.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
 [buildPlans.SevkaSlab.weights.Light]
 shape = 300
 menu = 300
 css = 300
+
+[buildPlans.SevkaSlab.weights.Regular]
+shape = 400
+menu = 400
+css = 400
 
 [buildPlans.SevkaSlab.weights.Medium]
 shape = 500
@@ -80,6 +75,11 @@ css = 500
 shape = 600
 menu = 600
 css = 600
+
+[buildPlans.SevkaSlab.weights.Bold]
+shape = 700
+menu = 700
+css = 700
 
 [buildPlans.SevkaSlab.widths.Normal]
 shape = 500
@@ -106,20 +106,15 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.SevkaFixed.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.SevkaFixed.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
 [buildPlans.SevkaFixed.weights.Light]
 shape = 300
 menu = 300
 css = 300
+
+[buildPlans.SevkaFixed.weights.Regular]
+shape = 400
+menu = 400
+css = 400
 
 [buildPlans.SevkaFixed.weights.Medium]
 shape = 500
@@ -130,6 +125,11 @@ css = 500
 shape = 600
 menu = 600
 css = 600
+
+[buildPlans.SevkaFixed.weights.Bold]
+shape = 700
+menu = 700
+css = 700
 
 [buildPlans.SevkaFixed.widths.Normal]
 shape = 500
